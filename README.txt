@@ -57,3 +57,9 @@ ALL GROUPS VIEW
 - Compact columns show Team, MP, GD, PTS, and Last 5.
 - A Last 5 reference legend was added below the standings.
 - Standings pagination and auto-scroll were removed because every group is visible at once.
+
+
+DATA RENDERING FIX
+- Restored missing JavaScript helper functions and leaderboard state variables.
+- Added embedded fallback data so index.html still displays when opened directly.
+- When hosted on GitHub Pages, the page continues loading the updated data.json file.
