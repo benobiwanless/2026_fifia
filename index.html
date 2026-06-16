@@ -233,7 +233,7 @@ h1{
   background:linear-gradient(180deg,#103653,#09263a);
   color:var(--cyan);
   font-weight:800;
-  font-size:min(1.12vw,1.95vh);
+  font-size:min(1.35vw,2.35vh);
 }
 .rows{
   height:78%;
@@ -259,7 +259,7 @@ h1{
 }
 .rank,.pts{
   text-align:center;
-  font-size:min(1.08vw,1.9vh);
+  font-size:min(1.28vw,2.25vh);
   font-weight:800;
 }
 .top .rank,.top .pts{color:var(--gold2)}
@@ -273,9 +273,9 @@ h1{
 }
 .flag{
   flex:0 0 auto;
-  width:1.6vw;
-  min-width:19px;
-  max-width:27px;
+  width:1.9vw;
+  min-width:22px;
+  max-width:31px;
   aspect-ratio:1.45/1;
   border-radius:2px;
   overflow:hidden;
@@ -292,7 +292,7 @@ h1{
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  font-size:min(1vw,1.72vh);
+  font-size:min(1.22vw,2.12vh);
   font-weight:700;
 }
 
@@ -357,12 +357,12 @@ h1{
 }
 .date{
   color:var(--gold);
-  font-size:min(1vw,1.72vh);
+  font-size:min(1.22vw,2.12vh);
   font-weight:800;
 }
 .time{
   color:#fff;
-  font-size:min(1.08vw,1.85vh);
+  font-size:min(1.28vw,2.2vh);
   font-weight:800;
 }
 .match{
@@ -374,15 +374,15 @@ h1{
   align-items:center;
   gap:.4vw;
   min-width:0;
-  font-size:min(1.12vw,1.9vh);
+  font-size:min(1.42vw,2.4vh);
   font-weight:700;
   color:#ffffff;
 }
 .side+.side{margin-top:.18vh}
 .mini{
-  width:1.2vw;
-  min-width:15px;
-  max-width:22px;
+  width:1.45vw;
+  min-width:17px;
+  max-width:25px;
   aspect-ratio:1.45/1;
   overflow:hidden;
   border-radius:2px;
@@ -404,7 +404,7 @@ h1{
   justify-content:space-between;
   gap:.5vw;
   color:var(--cyan2);
-  font-size:min(.84vw,1.42vh);
+  font-size:min(1vw,1.72vh);
   font-weight:700;
 }
 .venue{
@@ -432,6 +432,16 @@ h1{
 .page-dots span.active{
   background:var(--cyan);
   box-shadow:0 0 8px rgba(34,231,255,.75);
+}
+.no-games{
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--muted);
+  font-size:min(2vw,3.4vh);
+  font-weight:800;
+  letter-spacing:.08em;
 }
 @media(max-aspect-ratio:16/9){
   .screen{height:calc(100vw*9/16)}
@@ -473,8 +483,8 @@ h1{
 <section class="schedule">
   <div class="shead">
     <div>
-      <div class="stitle">NEXT MATCHES</div>
-      <div class="ssub">Eastern Time automatically applied</div>
+      <div class="stitle">TODAY'S MATCHES</div>
+      <div class="ssub">Today only • Eastern Time</div>
     </div>
     <div id="status" class="status">Loading official FIFA data…</div>
   </div>
@@ -485,8 +495,15 @@ h1{
 
 <script>
 let allGames=[];
-let schedulePage=0;
-let pageTimer=null;
+
+function easternDateKey(date){
+  return new Intl.DateTimeFormat("en-CA",{
+    timeZone:"America/New_York",
+    year:"numeric",
+    month:"2-digit",
+    day:"2-digit"
+  }).format(date);
+}
 
 function flagUrl(code){
   const special={
@@ -530,73 +547,63 @@ function renderGroups(data){
 function renderSchedule(){
   const games=document.getElementById("games");
   games.innerHTML="";
-  const pages=Math.max(1,Math.ceil(allGames.length/4));
-  if(schedulePage>=pages) schedulePage=0;
-  const visible=allGames.slice(schedulePage*4,schedulePage*4+4);
 
-  visible.forEach(g=>{
-    const dt=new Date(g.kickoff);
-    const date=dt.toLocaleDateString("en-US",{
-      timeZone:"America/New_York",
-      weekday:"short",
-      month:"short",
-      day:"numeric"
-    });
-    const time=dt.toLocaleTimeString("en-US",{
-      timeZone:"America/New_York",
-      hour:"numeric",
-      minute:"2-digit",
-      timeZoneName:"short"
-    });
+  const todayKey=easternDateKey(new Date());
+  const todayGames=allGames.filter(
+    g=>easternDateKey(new Date(g.kickoff))===todayKey
+  ).slice(0,4);
 
-    const el=document.createElement("article");
-    el.className="game";
-    el.innerHTML=`
-      <div class="gtop">
-        <span class="date">${date}</span>
-        <span class="time">${time}</span>
-      </div>
-      <div class="match">
-        <div class="side">
-          <span class="mini"><img src="${flagUrl(g.homeFlag)}"></span>
-          <span class="tname">${g.home}</span>
+  if(todayGames.length===0){
+    games.innerHTML=`<div class="no-games">NO GAMES SCHEDULED TODAY</div>`;
+  } else {
+    todayGames.forEach(g=>{
+      const dt=new Date(g.kickoff);
+      const date=dt.toLocaleDateString("en-US",{
+        timeZone:"America/New_York",
+        weekday:"short",
+        month:"short",
+        day:"numeric"
+      });
+      const time=dt.toLocaleTimeString("en-US",{
+        timeZone:"America/New_York",
+        hour:"numeric",
+        minute:"2-digit",
+        timeZoneName:"short"
+      });
+
+      const el=document.createElement("article");
+      el.className="game";
+      el.innerHTML=`
+        <div class="gtop">
+          <span class="date">${date}</span>
+          <span class="time">${time}</span>
         </div>
-        <div class="side">
-          <span class="mini"><img src="${flagUrl(g.awayFlag)}"></span>
-          <span class="tname">${g.away}</span>
+        <div class="match">
+          <div class="side">
+            <span class="mini"><img src="${flagUrl(g.homeFlag)}"></span>
+            <span class="tname">${g.home}</span>
+          </div>
+          <div class="side">
+            <span class="mini"><img src="${flagUrl(g.awayFlag)}"></span>
+            <span class="tname">${g.away}</span>
+          </div>
         </div>
-      </div>
-      <div class="meta">
-        <span>Group ${g.group}</span>
-        <span class="venue">${g.venue}</span>
-      </div>`;
-    games.appendChild(el);
-  });
+        <div class="meta">
+          <span>Group ${g.group}</span>
+          <span class="venue">${g.venue}</span>
+        </div>`;
+      games.appendChild(el);
+    });
+  }
 
   const dots=document.getElementById("pageDots");
-  dots.innerHTML="";
-  for(let i=0;i<pages;i++){
-    const dot=document.createElement("span");
-    if(i===schedulePage) dot.className="active";
-    dots.appendChild(dot);
-  }
-}
-
-function startScheduleRotation(){
-  if(pageTimer) clearInterval(pageTimer);
-  pageTimer=setInterval(()=>{
-    const pages=Math.max(1,Math.ceil(allGames.length/4));
-    schedulePage=(schedulePage+1)%pages;
-    renderSchedule();
-  },8000);
+  if(dots) dots.innerHTML="";
 }
 
 function render(data){
   renderGroups(data);
   allGames=data.games || [];
-  schedulePage=0;
   renderSchedule();
-  startScheduleRotation();
 
   document.getElementById("status").innerHTML=
     `Source: ${data.source}<br>Updated: ${new Date(data.updated).toLocaleString()}`;
