@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Cup 2026 Tournament Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#22e7ff;--cyan2:#9bf3ff;--blue:#117da8;--gold:#f7c84a;--gold2:#ffe48b;--white:#f5f8fc;--muted:#b9c9d8}
+*{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#02060c;font-family:"Barlow Condensed",Arial,sans-serif}
+.screen{position:relative;width:100vw;height:100vh;overflow:hidden;background:
+radial-gradient(circle at 50% 8%,rgba(40,125,255,.17),transparent 15%),
+radial-gradient(circle at 9% 30%,rgba(0,110,255,.08),transparent 18%),
+radial-gradient(circle at 91% 30%,rgba(0,110,255,.08),transparent 18%),
+linear-gradient(180deg,#020914 0%,#071522 58%,#0b1817 100%)}
+.screen:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 8% 18%,rgba(70,170,255,.7) 0 1px,transparent 2px),
+radial-gradient(circle at 20% 24%,rgba(70,170,255,.4) 0 1px,transparent 2px),
+radial-gradient(circle at 34% 16%,rgba(70,170,255,.5) 0 1px,transparent 2px),
+radial-gradient(circle at 61% 22%,rgba(70,170,255,.42) 0 1px,transparent 2px),
+radial-gradient(circle at 78% 17%,rgba(70,170,255,.5) 0 1px,transparent 2px),
+radial-gradient(circle at 92% 20%,rgba(70,170,255,.7) 0 1px,transparent 2px);
+pointer-events:none}
+.header{position:absolute;z-index:3;left:0;right:0;top:0;height:13.5vh;text-align:center;padding-top:.7vh}
+.kicker{color:var(--gold);font-size:min(.85vw,1.5vh);letter-spacing:.16em;font-weight:800}
+h1{margin:0;font-family:Teko,Impact,sans-serif;font-size:min(4.1vw,7.8vh);line-height:.9;letter-spacing:.04em;text-transform:uppercase;background:linear-gradient(#fff,#becbd6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{color:var(--cyan);font-size:min(1vw,1.8vh);font-weight:800}
+.live{position:absolute;right:2.3vw;top:4.5vh;display:flex;align-items:center;gap:.4em;padding:.32vh .75vw;border:2px solid #ff3030;border-radius:10px;background:#190608;color:#fff;font-size:min(.8vw,1.4vh);font-weight:800}
+.live i{width:.65em;height:.65em;border-radius:50%;background:red;box-shadow:0 0 8px red;animation:blink 1.1s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+.groups{position:absolute;z-index:3;left:2vw;right:2vw;top:13.8vh;height:50.2vh;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:.8vh .65vw}
+.group{min-width:0;min-height:0;overflow:hidden;border:1.5px solid var(--blue);border-radius:10px;background:linear-gradient(180deg,rgba(12,43,66,.97),rgba(5,18,30,.99));box-shadow:inset 0 0 0 1px rgba(34,231,255,.14)}
+.ghead{height:20%;min-height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 4%;background:linear-gradient(180deg,#103653,#09263a);color:var(--cyan);font-weight:800;font-size:min(.9vw,1.65vh)}
+.rows{height:80%;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:2%;padding:.7% 2% 1.8%}
+.row{min-height:0;display:grid;grid-template-columns:10% minmax(0,1fr) repeat(3,8%) 10%;align-items:center;border:1px solid rgba(180,200,215,.2);border-radius:6px;background:rgba(5,21,35,.92);color:#fff;overflow:hidden}
+.row.top{border-color:rgba(247,200,74,.85);background:linear-gradient(90deg,rgba(112,83,9,.95),rgba(44,34,10,.76))}
+.rank,.num,.pts{text-align:center;font-size:min(.75vw,1.35vh);font-weight:700}
+.pts{font-size:min(.9vw,1.6vh);font-weight:800}.top .rank,.top .pts{color:var(--gold2)}
+.team{min-width:0;display:flex;align-items:center;gap:.35vw;padding:0 .2vw;overflow:hidden}
+.flag{flex:0 0 auto;width:1.35vw;min-width:16px;max-width:23px;aspect-ratio:1.45/1;border-radius:2px;overflow:hidden;border:1px solid rgba(255,255,255,.16)}
+.flag img{width:100%;height:100%;object-fit:cover;display:block}.name{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:min(.78vw,1.42vh);font-weight:600}
+.schedule{position:absolute;z-index:3;left:2vw;right:2vw;bottom:1.8vh;height:33vh;border:1.5px solid var(--blue);border-radius:14px;background:linear-gradient(180deg,rgba(9,31,48,.97),rgba(5,17,28,.99));padding:.8vh .8vw}
+.shead{height:4.6vh;display:flex;justify-content:space-between;align-items:center;padding:0 .2vw}
+.stitle{font-family:Teko,Impact,sans-serif;color:#fff;font-size:min(2vw,3.6vh);line-height:1}.ssub{color:var(--cyan);font-size:min(.88vw,1.5vh);font-weight:800}.status{color:var(--muted);font-size:min(.75vw,1.3vh);text-align:right}
+.games{height:calc(100% - 4.6vh);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:.65vh .55vw}
+.game{min-width:0;min-height:0;overflow:hidden;border:1px solid rgba(34,231,255,.2);border-radius:9px;background:linear-gradient(180deg,rgba(13,43,65,.92),rgba(6,21,34,.96));padding:.55vh .55vw;display:grid;grid-template-rows:auto 1fr auto}
+.gtop{display:flex;justify-content:space-between;gap:.4vw}.date{color:var(--gold);font-size:min(.72vw,1.3vh);font-weight:800}.time{color:#fff;font-size:min(.83vw,1.48vh);font-weight:800}
+.match{align-self:center;min-width:0}.side{display:flex;align-items:center;gap:.3vw;min-width:0;font-size:min(.86vw,1.52vh);font-weight:700}.side+.side{margin-top:.15vh}.mini{width:1vw;min-width:13px;max-width:18px;aspect-ratio:1.45/1;overflow:hidden;border-radius:2px;flex:0 0 auto}.mini img{width:100%;height:100%;object-fit:cover}.tname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{display:flex;justify-content:space-between;gap:.4vw;color:var(--cyan2);font-size:min(.68vw,1.22vh);font-weight:700}.venue{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+@media(max-aspect-ratio:16/9){.screen{height:calc(100vw*9/16)}}
+</style>
+</head>
+<body>
+<div class="screen">
+<header class="header">
+  <div class="kicker">TOURNAMENT HUB</div>
+  <h1>WORLD CUP 2026</h1>
+  <div class="subtitle">Group Standings + Upcoming Matches • Eastern Time</div>
+</header>
+<div class="live"><i></i>LIVE UPDATES</div>
+<main id="groups" class="groups"></main>
+<section class="schedule">
+  <div class="shead">
+    <div><div class="stitle">NEXT MATCHES</div><div class="ssub">Eastern Time automatically applied</div></div>
+    <div id="status" class="status">Loading official FIFA data…</div>
+  </div>
+  <div id="games" class="games"></div>
+</section>
+</div>
+<script>
+const fallback = null;
+function flagUrl(code){
+  const special={eng:"https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",sct:"https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg"};
+  return special[code]||`https://flagcdn.com/w40/${code}.png`;
+}
+function sortedTeams(ts){return [...ts].sort((a,b)=>b.pts-a.pts||((b.gf-b.ga)-(a.gf-a.ga))||b.gf-a.gf||a.team.localeCompare(b.team))}
+function render(data){
+  const groups=document.getElementById("groups"); groups.innerHTML="";
+  Object.entries(data.groups).forEach(([letter,teams])=>{
+    const list=sortedTeams(teams);
+    const el=document.createElement("section");el.className="group";
+    el.innerHTML=`<div class="ghead"><span>GROUP ${letter}</span><span>PTS</span></div><div class="rows">${
+      list.map((t,i)=>`<div class="row ${i<2?"top":""}">
+      <div class="rank">${i+1}</div>
+      <div class="team"><span class="flag"><img src="${flagUrl(t.flag)}" alt=""></span><span class="name">${t.team}</span></div>
+      <div class="num">${t.p}</div><div class="num">${t.w}</div><div class="num">${t.d}</div>
+      <div class="pts">${t.pts}</div></div>`).join("")
+    }</div>`;
+    groups.appendChild(el);
+  });
+  const games=document.getElementById("games");games.innerHTML="";
+  data.games.slice(0,8).forEach(g=>{
+    const dt=new Date(g.kickoff);
+    const date=dt.toLocaleDateString("en-US",{timeZone:"America/New_York",weekday:"short",month:"short",day:"numeric"});
+    const time=dt.toLocaleTimeString("en-US",{timeZone:"America/New_York",hour:"numeric",minute:"2-digit",timeZoneName:"short"});
+    const el=document.createElement("article");el.className="game";
+    el.innerHTML=`<div class="gtop"><span class="date">${date}</span><span class="time">${time}</span></div>
+    <div class="match"><div class="side"><span class="mini"><img src="${flagUrl(g.homeFlag)}"></span><span class="tname">${g.home}</span></div>
+    <div class="side"><span class="mini"><img src="${flagUrl(g.awayFlag)}"></span><span class="tname">${g.away}</span></div></div>
+    <div class="meta"><span>Group ${g.group}</span><span class="venue">${g.venue}</span></div>`;
+    games.appendChild(el);
+  });
+  document.getElementById("status").innerHTML=`Source: ${data.source}<br>Updated: ${new Date(data.updated).toLocaleString()}`;
+}
+async function load(){
+  try{
+    const r=await fetch(`data.json?t=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok)throw new Error(r.status);
+    render(await r.json());
+  }catch(e){
+    document.getElementById("status").textContent="Unable to load data.json";
+  }
+}
+load();setInterval(load,60000);
+</script>
+</body>
+</html>
