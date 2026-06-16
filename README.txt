@@ -46,3 +46,7 @@ FONT + AUTO-SCROLL UPDATE
 - Group standings automatically scroll to the next two groups every 8 seconds.
 - The transition uses a smooth vertical slide/fade.
 - Manual next-page control still works.
+
+
+TOP 3 LEADERS UPDATE
+- The Stat Leaders panel now shows only the top 3 entries for each category.

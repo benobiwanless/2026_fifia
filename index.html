@@ -439,7 +439,7 @@ function renderLeaders(){
   renderLeaderTabs();
   const def=leaderDefs[leaderIndex];
   document.getElementById("leaderValueLabel").textContent=def.label;
-  const items=(appData.leaders?.[def.key]||[]).slice(0,5);
+  const items=(appData.leaders?.[def.key]||[]).slice(0,3);
   const fallback=[{name:"Stats updating",team:"FIFA",value:"--"}];
   const list=document.getElementById("leaderList");
   list.innerHTML="";
