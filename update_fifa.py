@@ -138,3 +138,5 @@ async def main():
     print(f"Updated from FIFA: {len(matches)} matches found.")
 
 asyncio.run(main())
+
+# leaders data is preserved from the previous data.json if not updated server-side.

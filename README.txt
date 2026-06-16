@@ -24,3 +24,18 @@ RELIABILITY
 FIFA does not publish a documented, browser-friendly public JSON API for this page.
 The updater therefore reads FIFA’s official page server-side. If FIFA changes its site
 format, the script preserves the last-known-good data rather than clearing the display.
+
+
+LAYOUT UPDATE
+- Standings now use a 3-column x 4-row grid on the left.
+- Right side shows today's matches only.
+- Below the schedule is a rotating leader-stats panel for Goals, Assists, Yellow Cards, and Red Cards.
+- The page auto-refreshes data.json every minute.
+
+
+FULL STANDINGS + LEADER PAGES
+- Left side shows two full group tables per page.
+- Each table includes MP, W, D, L, GF, GA, GD, PTS, and Last 5.
+- Standings pages advance every 10 seconds and can be advanced manually.
+- Stat Leaders includes clickable tabs and an arrow for Goals, Assists, Yellow Cards, and Red Cards.
+- Leader categories advance every 7 seconds.

@@ -12,7 +12,10 @@
         "l": 0,
         "gf": 2,
         "ga": 0,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Korea Republic",
@@ -23,7 +26,10 @@
         "l": 0,
         "gf": 2,
         "ga": 1,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Czechia",
@@ -34,7 +40,10 @@
         "l": 1,
         "gf": 1,
         "ga": 2,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       },
       {
         "team": "South Africa",
@@ -45,7 +54,10 @@
         "l": 1,
         "gf": 0,
         "ga": 2,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       }
     ],
     "B": [
@@ -58,7 +70,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Canada",
@@ -69,7 +84,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Qatar",
@@ -80,7 +98,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Bosnia & Herzegovina",
@@ -91,7 +112,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       }
     ],
     "C": [
@@ -104,7 +128,10 @@
         "l": 0,
         "gf": 1,
         "ga": 0,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Morocco",
@@ -115,7 +142,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Brazil",
@@ -126,7 +156,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Haiti",
@@ -137,7 +170,10 @@
         "l": 1,
         "gf": 0,
         "ga": 1,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       }
     ],
     "D": [
@@ -150,7 +186,10 @@
         "l": 0,
         "gf": 4,
         "ga": 1,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Australia",
@@ -161,7 +200,10 @@
         "l": 0,
         "gf": 2,
         "ga": 0,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Türkiye",
@@ -172,7 +214,10 @@
         "l": 1,
         "gf": 0,
         "ga": 2,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       },
       {
         "team": "Paraguay",
@@ -183,7 +228,10 @@
         "l": 1,
         "gf": 1,
         "ga": 4,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       }
     ],
     "E": [
@@ -196,7 +244,10 @@
         "l": 0,
         "gf": 7,
         "ga": 1,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Ivory Coast",
@@ -207,7 +258,10 @@
         "l": 0,
         "gf": 1,
         "ga": 0,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Ecuador",
@@ -218,7 +272,10 @@
         "l": 1,
         "gf": 0,
         "ga": 1,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       },
       {
         "team": "Curaçao",
@@ -229,7 +286,10 @@
         "l": 1,
         "gf": 1,
         "ga": 7,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       }
     ],
     "F": [
@@ -242,7 +302,10 @@
         "l": 0,
         "gf": 5,
         "ga": 1,
-        "pts": 3
+        "pts": 3,
+        "form": [
+          "W"
+        ]
       },
       {
         "team": "Japan",
@@ -253,7 +316,10 @@
         "l": 0,
         "gf": 2,
         "ga": 2,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Netherlands",
@@ -264,7 +330,10 @@
         "l": 0,
         "gf": 2,
         "ga": 2,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Tunisia",
@@ -275,7 +344,10 @@
         "l": 1,
         "gf": 1,
         "ga": 5,
-        "pts": 0
+        "pts": 0,
+        "form": [
+          "L"
+        ]
       }
     ],
     "G": [
@@ -288,7 +360,10 @@
         "l": 0,
         "gf": 2,
         "ga": 2,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "New Zealand",
@@ -299,7 +374,10 @@
         "l": 0,
         "gf": 2,
         "ga": 2,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Belgium",
@@ -310,7 +388,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Egypt",
@@ -321,7 +402,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       }
     ],
     "H": [
@@ -334,7 +418,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Saudi Arabia",
@@ -345,7 +432,10 @@
         "l": 0,
         "gf": 1,
         "ga": 1,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Spain",
@@ -356,7 +446,10 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       },
       {
         "team": "Cape Verde",
@@ -367,7 +460,10 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 1
+        "pts": 1,
+        "form": [
+          "D"
+        ]
       }
     ],
     "I": [
@@ -380,7 +476,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Senegal",
@@ -391,7 +488,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Iraq",
@@ -402,7 +500,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Norway",
@@ -413,7 +512,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       }
     ],
     "J": [
@@ -426,7 +526,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Algeria",
@@ -437,7 +538,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Austria",
@@ -448,7 +550,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Jordan",
@@ -459,7 +562,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       }
     ],
     "K": [
@@ -472,7 +576,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "DR Congo",
@@ -483,7 +588,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Uzbekistan",
@@ -494,7 +600,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Colombia",
@@ -505,7 +612,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       }
     ],
     "L": [
@@ -518,7 +626,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Croatia",
@@ -529,7 +638,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Ghana",
@@ -540,7 +650,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       },
       {
         "team": "Panama",
@@ -551,7 +662,8 @@
         "l": 0,
         "gf": 0,
         "ga": 0,
-        "pts": 0
+        "pts": 0,
+        "form": []
       }
     ]
   },
@@ -636,5 +748,115 @@
       "venue": "Mexico City Stadium",
       "status": "Scheduled"
     }
-  ]
+  ],
+  "leaders": {
+    "goals": [
+      {
+        "name": "Folarin Balogun",
+        "team": "USA",
+        "value": 2
+      },
+      {
+        "name": "Hwang In-beom",
+        "team": "Korea Republic",
+        "value": 1
+      },
+      {
+        "name": "Giovanni Reyna",
+        "team": "USA",
+        "value": 1
+      },
+      {
+        "name": "Raúl Jiménez",
+        "team": "Mexico",
+        "value": 1
+      },
+      {
+        "name": "Julián Quiñones",
+        "team": "Mexico",
+        "value": 1
+      }
+    ],
+    "assists": [
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      }
+    ],
+    "yellowCards": [
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      }
+    ],
+    "redCards": [
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      },
+      {
+        "name": "Stats updating",
+        "team": "FIFA",
+        "value": "--"
+      }
+    ]
+  }
 }
