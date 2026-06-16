@@ -78,83 +78,172 @@ h1{
   min-width:0;min-height:0;
 }
 .left-panel{
-  display:grid;grid-template-rows:auto 1fr auto;gap:.65vh;
+  min-width:0;min-height:0;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  gap:.55vh;
 }
 .section-head{
   display:flex;align-items:end;justify-content:space-between;gap:1vw;
 }
 .section-title{
-  font-family:Teko,Impact,sans-serif;font-size:min(2.8vw,4.85vh);line-height:.9;color:#fff;
+  font-family:Teko,Impact,sans-serif;
+  font-size:min(2.45vw,4.25vh);
+  line-height:.9;
+  color:#fff;
 }
-.section-sub{color:var(--cyan);font-size:min(1.15vw,1.98vh);font-weight:800}
-.page-control{display:flex;align-items:center;gap:.5vw}
-.page-label{color:var(--muted);font-size:min(1.02vw,1.76vh);font-weight:700}
-.nav-btn{
-  width:2.1vw;min-width:30px;aspect-ratio:1;border-radius:50%;
-  border:1px solid rgba(34,231,255,.28);background:rgba(10,40,60,.9);color:#fff;
-  font-size:min(1.45vw,2.5vh);font-weight:800;cursor:pointer;
+.section-sub{
+  color:var(--cyan);
+  font-size:min(1.05vw,1.82vh);
+  font-weight:800;
 }
-.nav-btn:hover{background:rgba(17,125,168,.75)}
-
-.standings-page{
+.all-groups-grid{
   min-width:0;min-height:0;
-  display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:.9vh;
-  transition:opacity .45s ease, transform .45s ease;
-}
-.standings-page.scroll-out{
-  opacity:0;
-  transform:translateY(-2.5vh);
-}
-.standings-page.scroll-in{
-  opacity:0;
-  transform:translateY(2.5vh);
-}
-.group-table{
-  min-width:0;min-height:0;overflow:hidden;border:1.7px solid var(--blue);border-radius:14px;
-  background:linear-gradient(180deg,rgba(12,43,66,.97),rgba(5,18,30,.99));
-  box-shadow:inset 0 0 0 1px rgba(34,231,255,.14);
-}
-.group-title{
-  height:14%;display:flex;align-items:center;padding:0 .9vw;
-  font-size:min(1.62vw,2.78vh);font-weight:800;color:var(--cyan);
-  background:linear-gradient(180deg,#103653,#09263a);
-}
-.table{
-  height:86%;display:grid;grid-template-rows:auto repeat(4,minmax(0,1fr));padding:.35vh .55vw .45vh;
-}
-.th,.tr{
   display:grid;
-  grid-template-columns:5% minmax(0,1fr) 6% 6% 6% 6% 6% 6% 7% 7% 25%;
-  align-items:center;column-gap:.15vw;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:repeat(4,minmax(0,1fr));
+  gap:.55vh .55vw;
 }
-.th{
-  color:var(--muted);font-size:min(1.18vw,2.02vh);font-weight:700;border-bottom:1px solid rgba(255,255,255,.14);
+.compact-group{
+  min-width:0;min-height:0;overflow:hidden;
+  border:1.5px solid var(--blue);
+  border-radius:10px;
+  background:linear-gradient(180deg,rgba(12,43,66,.97),rgba(5,18,30,.99));
+  box-shadow:inset 0 0 0 1px rgba(34,231,255,.12);
 }
-.tr{
-  color:#fff;font-size:min(1.18vw,2.02vh);font-weight:700;border-bottom:1px solid rgba(255,255,255,.09);
+.compact-head{
+  height:20%;
+  min-height:21px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 9% 9% 10% 28%;
+  align-items:center;
+  gap:.15vw;
+  padding:0 .45vw;
+  color:var(--cyan);
+  background:linear-gradient(180deg,#103653,#09263a);
+  font-size:min(.83vw,1.42vh);
+  font-weight:800;
 }
-.tr:last-child{border-bottom:none}
-.pos,.num,.pts{text-align:center}
-.pts{font-weight:800}
-.team-cell{min-width:0;display:flex;align-items:center;gap:.38vw}
-.flag{
-  width:1.8vw;min-width:22px;max-width:31px;aspect-ratio:1.45/1;border-radius:2px;overflow:hidden;flex:0 0 auto;
+.compact-head .group-name{
+  color:#fff;
+  font-size:min(1.02vw,1.76vh);
 }
-.flag img{width:100%;height:100%;object-fit:cover;display:block}
-.team-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.form{display:flex;align-items:center;gap:.2vw;justify-content:flex-start}
-.form-dot{
-  width:1.05vw;min-width:14px;max-width:18px;aspect-ratio:1;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.45);
-  color:#fff;font-size:min(.68vw,1.15vh);font-weight:900;
+.compact-rows{
+  height:80%;
+  display:grid;
+  grid-template-rows:repeat(4,minmax(0,1fr));
+  gap:1.8%;
+  padding:.35vh .4vw .45vh;
 }
-.form-dot.W{background:#24a65a;border-color:#5de18b}
-.form-dot.D{background:#7b8190;border-color:#aeb4c1}
-.form-dot.L{background:#d93434;border-color:#ff7777}
-.form-dot.empty{background:transparent}
-.page-dots{display:flex;justify-content:center;gap:7px}
-.page-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}
-.page-dots span.active{background:var(--cyan);box-shadow:0 0 8px rgba(34,231,255,.75)}
+.compact-row{
+  min-height:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 9% 9% 10% 28%;
+  align-items:center;
+  gap:.15vw;
+  border:1px solid rgba(180,200,215,.16);
+  border-radius:5px;
+  background:rgba(5,21,35,.92);
+  color:#fff;
+  padding:0 .15vw;
+}
+.compact-row.top{
+  border-color:rgba(247,200,74,.82);
+  background:linear-gradient(90deg,rgba(112,83,9,.92),rgba(44,34,10,.72));
+}
+.compact-team{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:.28vw;
+  overflow:hidden;
+}
+.compact-team .flag{
+  width:1.18vw;
+  min-width:15px;
+  max-width:20px;
+}
+.compact-team-name{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:min(.84vw,1.44vh);
+  font-weight:700;
+}
+.compact-num{
+  text-align:center;
+  font-size:min(.82vw,1.4vh);
+  font-weight:700;
+}
+.compact-pts{
+  text-align:center;
+  font-size:min(.92vw,1.56vh);
+  font-weight:800;
+}
+.compact-row.top .compact-pts{
+  color:var(--gold2);
+}
+.compact-form{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:.12vw;
+}
+.compact-form .form-dot{
+  width:.68vw;
+  min-width:10px;
+  max-width:13px;
+  font-size:min(.42vw,.72vh);
+  border-width:1.5px;
+}
+.form-legend{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  gap:.8vw;
+  border:1px solid rgba(34,231,255,.22);
+  border-radius:10px;
+  background:rgba(5,17,28,.88);
+  padding:.45vh .65vw;
+}
+.legend-title{
+  color:#fff;
+  font-size:min(1vw,1.72vh);
+  font-weight:800;
+}
+.legend-items{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:1vw;
+}
+.legend-items div{
+  display:flex;
+  align-items:center;
+  gap:.28vw;
+  color:var(--muted);
+  font-size:min(.86vw,1.46vh);
+  font-weight:700;
+}
+.legend-dot{
+  width:.9vw;
+  min-width:13px;
+  max-width:16px;
+  aspect-ratio:1;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:min(.58vw,1vh);
+  font-weight:900;
+  border:2px solid rgba(255,255,255,.45);
+}
+.legend-dot.W{background:#24a65a;border-color:#5de18b}
+.legend-dot.D{background:#7b8190;border-color:#aeb4c1}
+.legend-dot.L{background:#d93434;border-color:#ff7777}
+.legend-dot.empty{background:transparent}
 
 .right-panel{
   display:grid;grid-template-rows:1fr 1fr;gap:.9vh;
@@ -249,7 +338,7 @@ h1{
   <header class="header">
     <div class="kicker">TOURNAMENT HUB</div>
     <h1>WORLD CUP 2026</h1>
-    <div class="subtitle">Full Standings • Today’s Matches • Stat Leaders</div>
+    <div class="subtitle">All Groups • Today’s Matches • Stat Leaders</div>
     <div class="live"><i></i>LIVE UPDATES</div>
   </header>
 
@@ -257,16 +346,22 @@ h1{
     <section class="left-panel">
       <div class="section-head">
         <div>
-          <div class="section-title">GROUP STANDINGS</div>
-          <div class="section-sub">Full table data • Auto-scrolls every 8 seconds</div>
-        </div>
-        <div class="page-control">
-          <span id="standingsPageLabel" class="page-label">Groups A–B</span>
-          <button id="standingsNext" class="nav-btn">›</button>
+          <div class="section-title">ALL GROUP STANDINGS</div>
+          <div class="section-sub">Groups A–L shown together</div>
         </div>
       </div>
-      <div id="standingsPage" class="standings-page"></div>
-      <div id="standingsDots" class="page-dots"></div>
+
+      <div id="allGroupsGrid" class="all-groups-grid"></div>
+
+      <div class="form-legend">
+        <div class="legend-title">Last 5 matches</div>
+        <div class="legend-items">
+          <div><span class="legend-dot W">✓</span><span>Win</span></div>
+          <div><span class="legend-dot D">−</span><span>Draw</span></div>
+          <div><span class="legend-dot L">×</span><span>Loss</span></div>
+          <div><span class="legend-dot empty"></span><span>Not played</span></div>
+        </div>
+      </div>
     </section>
 
     <aside class="right-panel">
@@ -302,99 +397,47 @@ const leaderDefs=[
   {key:"redCards",label:"Red cards"}
 ];
 let appData=null;
-let standingsPageIndex=0;
-let leaderIndex=0;
-let standingsTimer=null;
-let leaderTimer=null;
-
-function flagUrl(code){
-  const special={
-    eng:"https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
-    sct:"https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg"
-  };
-  return special[code]||`https://flagcdn.com/w40/${code}.png`;
-}
-function easternDateKey(date){
-  return new Intl.DateTimeFormat("en-CA",{
-    timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"
-  }).format(date);
-}
-function sortedTeams(ts){
-  return [...ts].sort((a,b)=>b.pts-a.pts||((b.gf-b.ga)-(a.gf-a.ga))||b.gf-a.gf||a.team.localeCompare(b.team));
-}
-function formHtml(form){
+function compactFormHtml(form){
   const values=(form||[]).slice(-5);
   const padded=[...values];
   while(padded.length<5)padded.push("");
   return padded.map(v=>`<span class="form-dot ${v||"empty"}">${v||""}</span>`).join("");
 }
-function groupTable(letter,teams){
-  const list=sortedTeams(teams);
-  return `
-    <section class="group-table">
-      <div class="group-title">GROUP ${letter}</div>
-      <div class="table">
-        <div class="th">
-          <span></span><span>Team</span><span>MP</span><span>W</span><span>D</span><span>L</span>
-          <span>GF</span><span>GA</span><span>GD</span><span>Pts</span><span>Last 5</span>
-        </div>
+
+function renderAllGroups(){
+  const grid=document.getElementById("allGroupsGrid");
+  grid.innerHTML="";
+
+  Object.entries(appData.groups).forEach(([letter,teams])=>{
+    const list=sortedTeams(teams);
+    const card=document.createElement("section");
+    card.className="compact-group";
+    card.innerHTML=`
+      <div class="compact-head">
+        <span class="group-name">GROUP ${letter}</span>
+        <span>MP</span>
+        <span>GD</span>
+        <span>PTS</span>
+        <span>LAST 5</span>
+      </div>
+      <div class="compact-rows">
         ${list.map((t,i)=>`
-          <div class="tr">
-            <span class="pos">${i+1}</span>
-            <span class="team-cell">
+          <div class="compact-row ${i<2?"top":""}">
+            <div class="compact-team">
               <span class="flag"><img src="${flagUrl(t.flag)}" alt=""></span>
-              <span class="team-name">${t.team}</span>
-            </span>
-            <span class="num">${t.p}</span>
-            <span class="num">${t.w}</span>
-            <span class="num">${t.d}</span>
-            <span class="num">${t.l}</span>
-            <span class="num">${t.gf}</span>
-            <span class="num">${t.ga}</span>
-            <span class="num">${t.gf-t.ga}</span>
-            <span class="pts">${t.pts}</span>
-            <span class="form">${formHtml(t.form)}</span>
+              <span class="compact-team-name">${t.team}</span>
+            </div>
+            <span class="compact-num">${t.p}</span>
+            <span class="compact-num">${t.gf-t.ga}</span>
+            <span class="compact-pts">${t.pts}</span>
+            <span class="compact-form">${compactFormHtml(t.form)}</span>
           </div>
         `).join("")}
-      </div>
-    </section>`;
+      </div>`;
+    grid.appendChild(card);
+  });
 }
-function renderStandings(){
-  const letters=Object.keys(appData.groups);
-  const pages=Math.ceil(letters.length/2);
-  standingsPageIndex%=pages;
-  const slice=letters.slice(standingsPageIndex*2,standingsPageIndex*2+2);
-  document.getElementById("standingsPage").innerHTML=
-    slice.map(letter=>groupTable(letter,appData.groups[letter])).join("");
 
-  document.getElementById("standingsPageLabel").textContent=
-    slice.length===2?`Groups ${slice[0]}–${slice[1]}`:`Group ${slice[0]}`;
-
-  const dots=document.getElementById("standingsDots");
-  dots.innerHTML="";
-  for(let i=0;i<pages;i++){
-    const d=document.createElement("span");
-    if(i===standingsPageIndex)d.className="active";
-    dots.appendChild(d);
-  }
-}
-function nextStandings(){
-  const page=document.getElementById("standingsPage");
-  page.classList.add("scroll-out");
-
-  setTimeout(()=>{
-    standingsPageIndex=(standingsPageIndex+1)%Math.ceil(Object.keys(appData.groups).length/2);
-    page.classList.remove("scroll-out");
-    page.classList.add("scroll-in");
-    renderStandings();
-
-    requestAnimationFrame(()=>{
-      requestAnimationFrame(()=>{
-        page.classList.remove("scroll-in");
-      });
-    });
-  },420);
-}
 function renderSchedule(){
   const list=document.getElementById("scheduleList");
   list.innerHTML="";
@@ -458,25 +501,18 @@ function nextLeader(){
   leaderIndex=(leaderIndex+1)%leaderDefs.length;
   renderLeaders();
 }
-function restartStandingsTimer(){
-  clearInterval(standingsTimer);
-  standingsTimer=setInterval(nextStandings,8000);
-}
 function restartLeaderTimer(){
   clearInterval(leaderTimer);
   leaderTimer=setInterval(nextLeader,7000);
 }
 function render(data){
   appData=data;
-  standingsPageIndex=0;
   leaderIndex=0;
-  renderStandings();
+  renderAllGroups();
   renderSchedule();
   renderLeaders();
-  restartStandingsTimer();
   restartLeaderTimer();
 }
-document.getElementById("standingsNext").onclick=()=>{nextStandings();restartStandingsTimer()};
 document.getElementById("leaderNext").onclick=()=>{nextLeader();restartLeaderTimer()};
 
 async function load(){

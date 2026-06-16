@@ -50,3 +50,10 @@ FONT + AUTO-SCROLL UPDATE
 
 TOP 3 LEADERS UPDATE
 - The Stat Leaders panel now shows only the top 3 entries for each category.
+
+
+ALL GROUPS VIEW
+- Groups A through L are displayed together in a 3-column x 4-row layout.
+- Compact columns show Team, MP, GD, PTS, and Last 5.
+- A Last 5 reference legend was added below the standings.
+- Standings pagination and auto-scroll were removed because every group is visible at once.
